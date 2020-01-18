@@ -91,7 +91,7 @@ public class Application {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				JOptionPane.showMessageDialog(frame, "Login Successful");
 			}
 		});
 		btnLogin.setBounds(6, 108, 87, 29);
@@ -144,9 +144,7 @@ public class Application {
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				System.out.println("enter the valid username and password");
-			      //JOptionPane.showMessageDialog(this,"Incorrect login or password",
-			        //    "Error",JOptionPane.ERROR_MESSAGE);
+				JOptionPane.showMessageDialog(frame, "Register Successful");
 			}
 		});
 		btnRegister.setBounds(6, 148, 95, 29);
@@ -174,7 +172,7 @@ public class Application {
 		JButton btnSend = new JButton("Send");
 		btnSend.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				JOptionPane.showMessageDialog(frame, "Send Successful");
 			}
 		});
 		btnSend.setBounds(455, 152, 61, 29);
