@@ -24,11 +24,6 @@ public class Register {
 	private JTextField tfReUsername;
 	private JPasswordField tfRePass;
 	private JPasswordField tfReConfPas;
-	private JTextField tfMsg;
-	
-	private Socket connection;
-	private Scanner scanner;
-	private OutputStreamWriter outputStreamWriter;
 
 	/**
 	 * Launch the application.

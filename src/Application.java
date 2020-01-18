@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 
 public class Application {
 
+	private static Application window;
 	private JFrame frame;
 	private JTextField tfLogUsername;
 	private JPasswordField tfLogPass;
@@ -39,7 +40,7 @@ public class Application {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Application window = new Application();
+					window = new Application();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -91,7 +92,7 @@ public class Application {
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(frame, "Login Successful");
+				JOptionPane.showMessageDialog(frame, "Login Successful","Login", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		btnLogin.setBounds(6, 108, 87, 29);
@@ -143,8 +144,11 @@ public class Application {
 		JButton btnRegister = new JButton("Register");
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				new Login().onStartLogin();
+				window.frame.setVisible(false);
+				//JOptionPane.showMessageDialog(frame, "Register Successful","Register", JOptionPane.INFORMATION_MESSAGE);
 				
-				JOptionPane.showMessageDialog(frame, "Register Successful");
+	
 			}
 		});
 		btnRegister.setBounds(6, 148, 95, 29);

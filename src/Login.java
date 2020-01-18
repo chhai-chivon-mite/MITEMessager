@@ -36,7 +36,6 @@ public class Login {
 			}
 		});
 	}
-
 	/**
 	 * Create the application.
 	 */
@@ -97,4 +96,17 @@ public class Login {
 		panelLogin.add(btnLogReset);
 	}
 
+	public void onStartLogin() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login window = new Login();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	
 }
